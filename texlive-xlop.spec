@@ -1,12 +1,12 @@
-# revision 22096
+# revision 29236
 # category Package
 # catalog-ctan /macros/generic/xlop
-# catalog-date 2011-04-16 11:58:01 +0200
+# catalog-date 2013-02-26 20:28:25 +0100
 # catalog-license lppl
-# catalog-version 0.24
+# catalog-version 0.25
 Name:		texlive-xlop
-Version:	0.24
-Release:	2
+Version:	0.25
+Release:	1
 Summary:	Calculates and displays arithmetic operations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xlop
@@ -41,7 +41,7 @@ level operations, etc.).
 %files
 %{_texmfdistdir}/tex/generic/xlop/xlop.sty
 %{_texmfdistdir}/tex/generic/xlop/xlop.tex
-%doc %{_texmfdistdir}/doc/generic/xlop/LISEZ.MOI
+%doc %{_texmfdistdir}/doc/generic/xlop/LISEZMOI
 %doc %{_texmfdistdir}/doc/generic/xlop/README
 %doc %{_texmfdistdir}/doc/generic/xlop/xlop-doc-fr.pdf
 %doc %{_texmfdistdir}/doc/generic/xlop/xlop-doc-fr.tex
@@ -59,16 +59,3 @@ level operations, etc.).
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.24-2
-+ Revision: 757661
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.24-1
-+ Revision: 719942
-- texlive-xlop
-- texlive-xlop
-- texlive-xlop
-
