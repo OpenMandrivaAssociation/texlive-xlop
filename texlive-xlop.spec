@@ -6,7 +6,7 @@
 # catalog-version 0.25
 Name:		texlive-xlop
 Version:	0.25
-Release:	5
+Release:	6
 Summary:	Calculates and displays arithmetic operations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xlop
