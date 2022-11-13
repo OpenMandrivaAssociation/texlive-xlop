@@ -1,19 +1,12 @@
-# revision 29236
-# category Package
-# catalog-ctan /macros/generic/xlop
-# catalog-date 2013-02-26 20:28:25 +0100
-# catalog-license lppl
-# catalog-version 0.25
 Name:		texlive-xlop
-Version:	0.26
-Release:	2
+Version:	56910
+Release:	1
 Summary:	Calculates and displays arithmetic operations
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/xlop
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -30,32 +23,24 @@ features allow to deal with numbers (tests, display, some high
 level operations, etc.).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/xlop/xlop.sty
-%{_texmfdistdir}/tex/generic/xlop/xlop.tex
-%doc %{_texmfdistdir}/doc/generic/xlop/LISEZMOI
-%doc %{_texmfdistdir}/doc/generic/xlop/README
-%doc %{_texmfdistdir}/doc/generic/xlop/xlop-doc-fr.pdf
-%doc %{_texmfdistdir}/doc/generic/xlop/xlop-doc-fr.tex
-%doc %{_texmfdistdir}/doc/generic/xlop/xlop-doc.pdf
-%doc %{_texmfdistdir}/doc/generic/xlop/xlop-doc.tex
-#- source
-%doc %{_texmfdistdir}/source/generic/xlop/manual.sty
+%{_texmfdistdir}/tex/generic/xlop
+%doc %{_texmfdistdir}/doc/generic/xlop
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+cp -fpar tex doc %{buildroot}%{_texmfdistdir}
