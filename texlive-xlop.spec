@@ -3,7 +3,7 @@ Version:	56910
 Release:	2
 Summary:	Calculates and displays arithmetic operations
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/xlop
+URL:		https://www.ctan.org/tex-archive/macros/generic/xlop
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/xlop.doc.r%{version}.tar.xz
